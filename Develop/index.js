@@ -10,10 +10,18 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 
 inquirer
-  .prompt({
-    message: "What is your GitHub username",
-    name: "username"
-  })
+  .prompt([
+   { message: "What is your GitHub username?",
+    name: "username"},
+   
+    {type: "list",
+      choices : ["Green", "Blue", "Red", "Yellow"],
+      message: "Pick a color",
+      name: "color"
+    }
+    
+  ])
+
   .then(function({ username }) {
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
     
@@ -27,7 +35,7 @@ inquirer
   {return repo.name;
   });
 
-  function writeFile("userPage.pdf", data, function(err) {
+  fs.writeFile("userPage.pdf", data, function(err) {
     if (err) {
         throw err;
         
