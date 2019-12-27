@@ -1,3 +1,9 @@
+module.exports = {
+ generateHTML:generateHTML
+}
+
+
+
 const colors = {
   green: {
     wrapperBackground: "#E6E1C3",
@@ -69,7 +75,7 @@ function generateHTML(data) {
          font-family: 'BioRhyme', serif;
          margin: 0;
          }
-         h1 {
+         h1 { 
          font-size: 3em;
          }
          h2 {
@@ -170,5 +176,16 @@ function generateHTML(data) {
             zoom: .75; 
           } 
          }
-      </style>`
+      </style>
+      </head>
+      
+      
+      
+      <h1>${data.name}</h1>
+
+      
+
+      
+      `
+
         }
