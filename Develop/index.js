@@ -66,7 +66,7 @@ conversion({html: html}, function(err, result) {
   }
 console.log(result.numberOfPages);
 console.log(result.logs);
-result.stream.pipe(fs.createWriteStream("C:\Users\Princess Itaya\Documents\first-node\Develop\resume.pdf"));
+result.stream.pipe(fs.createWriteStream("C:\Users\Princess Itaya\Documents\first-node\Develop"));
 conversion.kill();
 })
 

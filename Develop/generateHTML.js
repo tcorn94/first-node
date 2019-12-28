@@ -180,10 +180,27 @@ function generateHTML(data) {
       </head>
       
       
+      <div class ="photo-header> 
+      
+      
       
       <h1>${data.name}</h1>
+      <img src=${data.avatar_url} alt="Alps">
+      <h2>${data.bio}</h2>
+      </div> 
 
-      
+      <div class="card"> 
+      <h2>Followers</h2>
+      ${data.followers}
+      </div>
+      <div class="card"> 
+      <h2>Following</h2>
+      ${data.following}
+      </div>
+      <div class="card"> 
+      <h2>Repos</h2>
+      ${data.public_repos}
+      </div>
 
       
       `
