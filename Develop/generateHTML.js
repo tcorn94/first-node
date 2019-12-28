@@ -2,6 +2,8 @@ module.exports = {
  generateHTML:generateHTML
 }
 
+const information = require("./index");
+
 
 
 const colors = {
@@ -32,6 +34,7 @@ const colors = {
 };
 
 function generateHTML(data) {
+  console.log(data);
   return `<!DOCTYPE html>
 <html lang="en">
    <head>
@@ -105,6 +108,9 @@ function generateHTML(data) {
          padding: 10px;
          width: 95%;
          border-radius: 6px;
+         margin: 10px;
+        
+       
          }
          .photo-header img {
          width: 250px;
@@ -142,6 +148,7 @@ function generateHTML(data) {
          padding: 50px;
          padding-left: 100px;
          padding-right: 100px;
+         text-align: center;
          }
 
          .row {
@@ -180,14 +187,21 @@ function generateHTML(data) {
       </head>
       
       
-      <div class ="photo-header> 
       
       
+      <div class ="photo-header img"> 
+      <img src=${data.avatar_url}>
       
-      <h1>${data.name}</h1>
-      <img src=${data.avatar_url} alt="Alps">
-      <h2>${data.bio}</h2>
       </div> 
+
+      <div class="photo-header h1"> 
+      <h2>${data.name}</h2>
+   
+      </div>
+         <div class="container">
+      <h2>User Bio</h2>
+         <h4>${data.bio}</h4>
+      </div>
 
       <div class="card"> 
       <h2>Followers</h2>
