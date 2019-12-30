@@ -189,7 +189,7 @@ function generateHTML(data) {
       
       
       
-      <div class ="photo-header img"> 
+      <div class ="photo-header"> 
       <img src=${data.avatar_url}>
       
       </div> 
@@ -197,6 +197,17 @@ function generateHTML(data) {
       <div class="photo-header h1"> 
       <h2>${data.name}</h2>
    
+      </div>
+
+      <div class="links-nav">
+      <div class="nav-link">
+         Location:
+      ${data.location}
+         Company:
+         ${data.company}
+         Email:
+         ${data.email}
+         </div>
       </div>
          <div class="container">
       <h2>User Bio</h2>
@@ -214,6 +225,10 @@ function generateHTML(data) {
       <div class="card"> 
       <h2>Repos</h2>
       ${data.public_repos}
+      </div>
+      <div class="card"> 
+      <h2>Gists</h2>
+      ${data.public_gists}
       </div>
 
       
